@@ -3,10 +3,7 @@
 (working with Cynthia Riginos)
 ----
 
-
-####  To add information
-
-Please post to the course Ed Discussion board and Cynthia will update this site
+To add information, please post to the course Ed Discussion board and Cynthia will update this site
 
 
 ----
@@ -113,8 +110,6 @@ As we are all aware, global temperatures are rising. The glib summary of how spe
 - Pearman PB, Guisan A, Broennimann O (2008) Niche dynamics in space and time. Trends in Ecology and Evolution  
 - Poloczanska ES, Brown CJ, Sydeman WJ, Kiessling W, Schoeman DS, Moore PJ, Brander KM, Bruno JF, Buckley LB, Burrows MT, Duarte CM, Halpern BS, Holding J, Kappel CV, O'Connor MI, Pandolfi JM, Parmesan C, Schwing F, Thompson SA, Richardson AJ (2013) Global imprint of climate change on marine life. Nature Climate Change 3: 1-7 
 - Stuart-Smith RD, Edgar GJ, Bates AE (2017) Thermal limits to the geographic distributions of shallow-water marine species. Nat Ecol Evol 1: 1846-1852 doi 10.1038/s41559-017-0353-x
-
 - Sunday JM, Bates AE, Dulvy NK (2011) Global analysis of thermal tolerance and latitude in ectotherms. Proc Biol Sci 278: 1823-1830 
-
 - Sunday JM, Bates AE, Dulvy NK (2012) Thermal tolerance and the global redistribution of animals. Nature Climate Change 2: 686-690 
 

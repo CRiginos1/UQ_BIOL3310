@@ -91,6 +91,8 @@ As we are all aware, global temperatures are rising. The glib summary of how spe
 
 - Phylogenetic rate of change?
 
+- **Please add your wish lists to discussion board and they will be added here along with resources to show you how to do those analyses!**
+
   
 
 

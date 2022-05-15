@@ -37,8 +37,10 @@ As we are all aware, global temperatures are rising. The glib summary of how spe
 
   - *Upper and lower thermal limits for terrestrial and marine ectotherms*: Sunday JM, Bates AE, Dulvy NK (2011) Global analysis of thermal tolerance and latitude in ectotherms. Proc Biol Sci 278: 1823-1830 doi 10.1098/rspb.2010.1295
 
-    
+  - *A global database:* Bennett, J. M., Calosi, P., Clusella-Trullas, S., Martínez, B., Sunday,  J., Algar, A. C., ... & Morales-Castilla, I. (2018). GlobTherm, a  global database on thermal tolerances for aquatic and terrestrial  organisms. *Scientific Data*, *5*(1), 1-7.
 
+    
+  
   
 
 ### Range shifts

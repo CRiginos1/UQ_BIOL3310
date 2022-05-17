@@ -83,15 +83,15 @@ As we are all aware, global temperatures are rising. The glib summary of how spe
 
 ### Wish list of code needs:
 
-- Interacting with BioOracle (marine layers)
-
 - Tree manipulation and retrieval
 
-- How to measure phylogenetic signal
+- How to measure phylogenetic signal, rate of change (Blomberg's K)
 
-- Phylogenetic corellation 
+- past and present data 
 
-- Phylogenetic rate of change?
+- Interacting with BioOracle (marine layers), pulling out environmental information, confidence intervals
+
+- web of science searching 
 
 - **Please add your wish lists to discussion board and they will be added here along with resources to show you how to do those analyses!**
 

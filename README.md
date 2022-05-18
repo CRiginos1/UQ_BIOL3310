@@ -83,9 +83,9 @@ As we are all aware, global temperatures are rising. The glib summary of how spe
 
 ### Wish list of code needs:
 
-- Tree manipulation and retrieval
+- Tree manipulation and retrieval - posted in HOW To folder 
 
-- How to measure phylogenetic signal, rate of change (Blomberg's K)
+- How to measure phylogenetic signal, rate of change (Blomberg's K) - posted in HOW To folder 
 
 - past and present data 
 

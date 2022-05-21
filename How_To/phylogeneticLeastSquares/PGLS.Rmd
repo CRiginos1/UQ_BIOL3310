@@ -1,0 +1,64 @@
+---
+title: "Phylogenetic Least Squares"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Testing for corellations using phylogenetic least squares
+
+## Why? 
+
+When species are your unit of inference and you undertake standard statistical analyses, you are implicitly assuming that the evolutionary distance between all species is equal (a.k.a. a phylogenetic "bush" rather than a tree ) - we know this is not true! 
+
+Phylogenetic least squares allows you to explore linear relationships between variables contingent upon covariances extrapolated from the phylogenetic tree.
+
+## Example 
+
+This is based on a paper that a UQ undergraduate student, [Katja Kasimatis](https://oregon.arcsfoundation.org/news/congratulations-2021-dobzhansky-prize-winner), wrote looking at variation in egg sizes for coral reef fishes (Kasimatis & Riginos 2016: Coral Reefs). She went on to get her PhD at the University of Oregon and was awarded the Dobzhansky Prize, one of the highest award for a finishing PhD student in evolutionary biology - way to go Katja!
+
+```{r load libraries and import files }
+library(ape)
+library(geiger)
+library(nlme)
+
+fishdata <- read.csv("fishtraits_geography.csv", header=TRUE, row.names=1)  #data file
+fishtree<-read.tree("Fish_chronogram.nex")
+plot(fishtree)
+```
+
+### Prepping the data
+
+These example data files have been well prepared. Most likely yours will not.  See `BlombergK.html` for some general tips on getting the taxa names in your data file and tree to match. Make sure to check for branch length also!
+
+### Analyses
+
+PGLS can be used like any regression.  You can model the effect on one predictive variable on one response variable, or you can make a more complex multiple regression model. 
+
+```{r pgls analysis }
+
+#reduce the tree to match your data 
+tree_reduced <-treedata(fishtree, fishdata, sort=TRUE, warnings=TRUE)  #lots of warnings!
+plot(tree_reduced$phy, cex = 0.5)  #simpler tree than uploaded tree - many branches pruned
+
+fishdata_reduced<-fishdata[row.names(tree_reduced$data),]  #simplified data file
+
+#now derive a covariance matrix under the assumption of Brownian motion proportional to the tree
+bm.tree<-corBrownian(phy=tree_reduced$phy)  
+
+#testing with PGLS - simple prediction: body size of fish predicts egg size  
+univariatePGLS<-gls(log(vol)~sl, correlation=bm.tree, data=fishdata_reduced)
+summary(univariatePGLS)
+anova(univariatePGLS, test="F")  #this test asks how better is the model than one that is based on an intercept only, that is, we do not use body size as predictor
+## -> body size highly significant!
+
+#testing with PGLS - multiple predictions: egg type and latitude and their interactions
+PGLSmodel<-gls(log(vol)~egg.type*latitude, correlation=bm.tree, data=fishdata_reduced)
+summary(PGLSmodel)  #complicated results because there are a lot of categories
+anova(PGLSmodel, test="F")  # look at p values here - only egg type is significant, so latitude and interaction between latitude and egg type not significant!
+
+
+```
+
